@@ -4,76 +4,130 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Javascript Quiz</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        
-        <div id="navdiv">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">View High Scores</a>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-                </nav>
-        </div>
-            
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <header class="col-8 col-md-6 col-lg-6 justify-content-center">
-                    <h1>
-                        Coding Quiz Challenge
-                    </h1>
-                </header>
-            </div>
-            
-            <div class="row justify-content-center">
-                <section class="col-8 col-md-6 col-lg-6 justify-content-center question" id="question">
-                    <p>Welcome to the JavaScript Quiz.</p>
-                    <p>Press start to enter. Good luck.</p>
-                </section>
-            </div>
-            <div class="row justify-content-center">
-                <main class="col-8 col-md-6 col-lg-6 justify-content-center answer" id="answer">
-                    
-                </main>
-            </div>
-            <div class="row justify-content-center">
-                <section class="col-2 justify-content-center buttons" id="buttons">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Javascript Quiz</title>
+		<meta name="description" content="" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="" />
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="browsehappy">
+				You are using an <strong>outdated</strong> browser.
+				Please <a href="#">upgrade your browser</a> to improve
+				your experience.
+			</p>
+		<![endif]-->
 
-                </section>
-            </div>
-        </div>
-        
+		<!-- Bootstrap default nav bar with links to the main page and the score page once built  -->
+		<div id="navdiv">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div
+						class="collapse navbar-collapse"
+						id="navbarSupportedContent"
+					>
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="index.html"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#"
+									>View High Scores</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- fluid container to take over the same screen, sub divs for making content rows -->
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<!-- Page header - will stay static -->
+				<header
+					class="col-8 col-md-6 col-lg-6 justify-content-center"
+				>
+					<h1>Coding Quiz Challenge</h1>
+				</header>
+			</div>
 
+			<div class="row justify-content-center">
+				<!-- Use this div for questions -->
+				<section
+					class="col-8 col-md-6 col-lg-6 justify-content-center clock"
+					id="clock"
+				></section>
+				<section
+					class="col-8 col-md-6 col-lg-6 justify-content-center question"
+					id="question"
+				>
+					<p>Welcome to the JavaScript Quiz.</p>
+					<p>Press start to enter. Good luck.</p>
+				</section>
+			</div>
+			<div class="row justify-content-center">
+				<!-- Will put list of possible answers here via javascript -->
+				<main
+					class="col-8 col-md-6 col-lg-6 justify-content-center answer"
+					id="answer"
+				></main>
+			</div>
+			<div class="row justify-content-center">
+				<!-- Control buttons for quiz start and answer submission -->
+				<section
+					class="col-2 justify-content-center buttons"
+					id="buttons"
+				></section>
+			</div>
+		</div>
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<!-- JavaScript Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
 
-        <!-- Optional JavaScript -->
-        <script type="text/javascript" src="./script.js" async defer></script>
-    </body>
+		<!-- Optional JavaScript -->
+		<script
+			type="text/javascript"
+			src="./script.js"
+			async
+			defer
+		></script>
+	</body>
 </html>
