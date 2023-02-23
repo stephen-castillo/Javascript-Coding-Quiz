@@ -1,7 +1,7 @@
 const quiz = [
 {
     question: "What is JavaScript?",
-    anwers: ["A programming language for the web", "A type of coffee", "A brand of shoes", "A type of car"],  
+    answers: ["A programming language for the web", "A type of coffee", "A brand of shoes", "A type of car"],  
     correct: "A programming language for the web"
 },
 {
@@ -16,7 +16,7 @@ const quiz = [
 },
 {
     question: "What is the difference between let and var in JavaScript?",
-    anwers:[ "let is block-scoped, while var is function-scoped", "let is function-scoped, while var is block-scoped", "let is a reserved word in JavaScript, while var is not", "let is a newer keyword in JavaScript, while var is an older one"],
+    answers:[ "let is block-scoped, while var is function-scoped", "let is function-scoped, while var is block-scoped", "let is a reserved word in JavaScript, while var is not", "let is a newer keyword in JavaScript, while var is an older one"],
     correct: "let is block-scoped, while var is function-scoped"
 },
 {
@@ -26,7 +26,7 @@ const quiz = [
 },
 {
     question: "What is the purpose of the keyword 'this' in JavaScript?",
-    anwers: ["To refer to the current object", "To refer to the global object", "To refer to a different object", "To refer to a variable"],
+    answers: ["To refer to the current object", "To refer to the global object", "To refer to a different object", "To refer to a variable"],
     correct: "To refer to the current object"
 },
 {
@@ -36,7 +36,7 @@ const quiz = [
 },
 {
     question:"What is the purpose of the 'use strict' directive in JavaScript?", 
-    anwers: ["To enable strict mode, which enforces stricter rules for writing JavaScript code", "To disable strict mode, which allows for looser rules for writing JavaScript code", "To enable debugging mode in JavaScript", "To enable automatic semicolon insertion in JavaScript"],
+    answers: ["To enable strict mode, which enforces stricter rules for writing JavaScript code", "To disable strict mode, which allows for looser rules for writing JavaScript code", "To enable debugging mode in JavaScript", "To enable automatic semicolon insertion in JavaScript"],
     correct: "To enable strict mode, which enforces stricter rules for writing JavaScript code"
 },
 {
