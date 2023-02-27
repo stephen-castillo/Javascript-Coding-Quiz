@@ -6,17 +6,12 @@ var clock = document.getElementById('clock');
 var start = document.getElementById('start');
 var cancel = document.getElementById('cancel');
 var gameclock;
+var questions = document.getElementById('question');
+var qID = 0;
+var answers = document.getElementById('answer');
 
 console.log(clock);
 console.log(start);
-
-
-/* Count down funciton */
-/* setInterval(function(){
-    time--;
-    console.log(time);
-    clock.innerText = 'Time left: ' + time + ' seconds';
-}, 1000); */
 
 /* Need timer function */
 function timer(event){
@@ -33,6 +28,11 @@ function timeKiller(event) {
     clearInterval(gameclock);
     alert('Game cancelled');
     time = 240;
+}
+
+function theQuiz(){
+    
+    questions.innerText = quiz[qID]['question'];
 }
 
 /* Check if timer is still active AND if wrong answer still = 0 */

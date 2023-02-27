@@ -69,43 +69,39 @@
 			</nav>
 		</div>
 		<!-- fluid container to take over the same screen, sub divs for making content rows -->
-		<div class="container-fluid">
-			<div class="row justify-content-center">
+		<div class="container-fluid justify-content-center">
+			<div class="row-cols-auto">
 				<!-- Page header - will stay static -->
 				<header
-					class="col-8 col-md-6 col-lg-6 justify-content-center"
+					class="header"
 				>
 					<h1>Coding Quiz Challenge</h1>
 				</header>
 			</div>
 
-			<div class="row justify-content-center">
+			<div class="row-cols-auto">
 				<!-- Use this div for questions -->
 				<section
-					class="col-8 col-md-6 col-lg-6 justify-content-center clock"
+					class="clock"
 					id="clock"
 				></section>
 				<section
-					class="col-8 col-md-6 col-lg-6 justify-content-center question"
+					class="question"
 					id="question"
 				>
 					<p>Welcome to the JavaScript Quiz.</p>
 					<p>Press start to enter. Good luck.</p>
 				</section>
 			</div>
-			<div class="row justify-content-center">
+			<div class="row-cols-auto">
 				<!-- Will put list of possible answers here via javascript -->
-				<main
-					class="col-8 col-md-6 col-lg-6 justify-content-center answer"
-					id="answer"
-				></main>
+				<main class="answer" id="answer">
+
+                </main>
 			</div>
-			<div class="row justify-content-center">
+			<div class="row">
 				<!-- Control buttons for quiz start and answer submission -->
-				<section
-					class="col-2 justify-content-center buttons"
-					id="buttons"
-				>
+				<section class="buttons" id="buttons">
                     <button class="btn btn-primary start" id="start">Start</button>
                     <button class="btn btn-danger cancel" id="cancel">Cancel</button>
                 </section>
@@ -126,11 +122,7 @@
 		></script>
 
 		<!-- Optional JavaScript -->
-		<script
-			type="text/javascript"
-			src="./script.js"
-			async
-			defer
-		></script>
+        <script type="text/javascript" src="./questions.js" async defer></script>
+		<script type="text/javascript" src="./script.js" async defer></script>
 	</body>
 </html>
