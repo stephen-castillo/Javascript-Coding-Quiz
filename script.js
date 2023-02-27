@@ -14,7 +14,10 @@ console.log(clock);
 console.log(start);
 
 
+/* function to display quiz questions and possible answers */
 function theQuiz(){
+
+    /* Check if timer is still active AND if wrong answer still = 0 */
     if(time !== 0){
         questions.innerText = quiz[qID]['question'];
         answers.innerHTML = '<ul><li>' + 
@@ -23,7 +26,17 @@ function theQuiz(){
         quiz[qID]['answers'][2] + '</li><li>' + 
         quiz[qID]['answers'][3] + '</li></ul>';
     }
-    
+    qID++
+}
+
+function pickIt(event){
+    event.preventDefault();
+    console.log(event.target);
+    if( strcmp(event.target,  quiz[qID]['correct'])){
+        correct++;
+    }else{
+        wrong++
+    }
 }
 
 /* Need timer function */
@@ -37,16 +50,17 @@ function timer(event){
     }, 1000);
 }
 
+/* function for cancelling the game and starting over mid run */
 function timeKiller(event) {
     event.preventDefault();
     clearInterval(gameclock);
     alert('Game cancelled');
     time = 240;
+    qID = 0;
 }
 
 
 
-/* Check if timer is still active AND if wrong answer still = 0 */
 
 
 /* for loop to go through questions and answers and replace html conent */
@@ -57,7 +71,6 @@ function timeKiller(event) {
     /* Check answer submitted against correct answer 
     If correct update correct count and continue
     else break and return wrong answer message*/
-
 
 
 /* Event handler to cancel quiz */
