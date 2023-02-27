@@ -13,9 +13,17 @@ var answers = document.getElementById('answer');
 console.log(clock);
 console.log(start);
 
+
+function theQuiz(){
+    
+    questions.innerText = quiz[qID]['question'];
+    answers.innerHTML = '<ul><li>'+quiz[qID]['answers'][0]+'</li></ul>';
+}
+
 /* Need timer function */
 function timer(event){
     event.preventDefault();
+    theQuiz();
     gameclock = setInterval(function(){
         time--;
         console.log(time);
@@ -30,10 +38,7 @@ function timeKiller(event) {
     time = 240;
 }
 
-function theQuiz(){
-    
-    questions.innerText = quiz[qID]['question'];
-}
+
 
 /* Check if timer is still active AND if wrong answer still = 0 */
 
