@@ -15,9 +15,15 @@ console.log(start);
 
 
 function theQuiz(){
+    if(time !== 0){
+        questions.innerText = quiz[qID]['question'];
+        answers.innerHTML = '<ul><li>' + 
+        quiz[qID]['answers'][0] + '</li><li>' + 
+        quiz[qID]['answers'][1] + '</li><li>' + 
+        quiz[qID]['answers'][2] + '</li><li>' + 
+        quiz[qID]['answers'][3] + '</li></ul>';
+    }
     
-    questions.innerText = quiz[qID]['question'];
-    answers.innerHTML = '<ul><li>'+quiz[qID]['answers'][0]+'</li></ul>';
 }
 
 /* Need timer function */
